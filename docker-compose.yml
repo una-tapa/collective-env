@@ -1,0 +1,65 @@
+version: '3'
+# volumes:
+#    krb5kdc-data:
+services:
+  liberty1:
+    build: websphere-liberty
+    hostname: liberty1
+    container_name: liberty1
+    ports:
+      - "9043:9043"
+      - "9443:9443"
+      - "9080:9080"
+      - "2810:2809"      
+    networks:
+      krbnet:
+        ipv4_address: 10.5.0.3
+    volumes:
+    - /Users/htakamiy@us.ibm.com/docker/logs1:/logs
+  liberty2:
+    build: websphere-liberty
+    hostname: liberty2
+    container_name: liberty2    
+    ports:
+      - "9045:9043"
+      - "9445:9443"
+      - "9085:9080"
+      - "2811:2809"            
+    networks:
+      krbnet:
+        ipv4_address: 10.5.0.5
+    volumes:
+    - /Users/htakamiy@us.ibm.com/docker/logs2:/logs
+  liberty3:
+    build: websphere-liberty
+    hostname: liberty3
+    container_name: liberty3    
+    ports:
+      - "9047:9043"
+      - "9447:9443"
+      - "9087:9080"
+      - "2812:2809"            
+    networks:
+      krbnet:
+        ipv4_address: 10.5.0.10
+    volumes:
+    - /Users/htakamiy@us.ibm.com/docker/logs3:/logs
+  liberty4:
+    build: websphere-liberty
+    hostname: liberty4
+    container_name: liberty4    
+    ports:
+      - "9049:9043"
+      - "9449:9443"
+      - "9089:9080"
+      - "2813:2809"            
+    networks:
+      krbnet:
+        ipv4_address: 10.5.0.13
+    volumes:
+    - /Users/htakamiy@us.ibm.com/docker/logs4:/logs
+networks:
+  krbnet:   
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16

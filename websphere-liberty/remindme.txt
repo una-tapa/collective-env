@@ -1,0 +1,31 @@
+
+== Hosts ============
+liberty1 : collective controller main
+liberty2 : collective replica
+liberty3 : collective replica
+liberty4 : collective member
+== Passwords =======
+liberty1 : c1KS (keystore password), gil/gilpwd
+liberty2 : c2KS (keystore password), gil/gilpwd
+liberty3 : c3KS (keystore password), gil/gilpwd
+liberty4 : m1KS  
+======================
+ports      9443 (default JMX port)  10010 (default replica port)
+======================
+On liberty1
+- run /setup_liberty1.sh
+On liberty2 & 3
+- run /setup_liberty2.sh (to make liberty2 a replica of liberty1)
+- run /setup_liberty3.sh (to make liberty3 another replica of liberty1)
+On liberty4
+- run /setup_liberty4.sh (to make liberty4 a member of liberty1)
+======================
+Commands - in case I need to type it for debugging purpose.
+To create a main controller
+
+To make replica controller
+/opt/ibm/wlp/bin/collective replicate defaultServer --keystorePassword=c2KS --controller=gil:gilpwd@liberty1:9443
+/opt/ibm/wlp/bin/collective addReplica liberty2:10010 --controller=gil:gilpwd@liberty1:9443
+To join a member
+/opt/ibm/wlp/bin/collective join defaultServer --controller=gil:gilpwd@liberty1:9443 --keystorePassword=m1KS
+=======================
