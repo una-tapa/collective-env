@@ -8,4 +8,5 @@ echo "***** Starting server"
 /opt/ibm/wlp/bin/server start defaultServer
 echo "***** Saving keystores  "
 cp -r /opt/ibm/wlp/usr/servers/defaultServer/resources /logs/liberty1-keystores-resources
+cp -r /opt/ibm/wlp/usr/servers/defaultServer/server.xml /logs/server.xml
 

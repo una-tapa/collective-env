@@ -1,0 +1,73 @@
+Keystore type: PKCS12
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: serveridentity
+Creation date: Dec 27, 2021
+Entry type: PrivateKeyEntry
+Certificate chain length: 2
+Certificate[1]:
+Owner: CN=defaultServer, L=%2Fopt%2Fibm%2Fwlp%2Fusr, L=liberty1, OU=controller, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Issuer: OU=controllerRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Serial number: ad1c4e43912
+Valid from: Mon Dec 27 16:10:25 EST 2021 until: Sat Dec 26 16:10:25 EST 2026
+Certificate fingerprints:
+	 SHA1: 63:7C:E6:11:D6:21:A6:88:85:1D:F0:62:DB:44:97:B8:86:1E:16:1B
+	 SHA256: 0D:C7:05:67:68:25:9F:0C:60:B9:FF:C1:B8:03:A8:E6:A6:20:C4:99:0D:6C:38:A4:C0:95:93:4B:78:CB:5E:8B
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: C6 35 DE 02 F7 2E 91 D6   EC A5 3D 74 E5 AE DD 71  .5........=t...q
+0010: C5 DC D9 8B                                        ....
+]
+]
+
+#2: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 35 80 8C FF EC 21 92 71   D4 C2 10 CC 91 1F CA 55  5....!.q.......U
+0010: A3 C0 38 A5                                        ..8.
+]
+]
+
+Certificate[2]:
+Owner: OU=controllerRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Issuer: OU=controllerRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Serial number: ad149738d96
+Valid from: Mon Dec 27 16:10:23 EST 2021 until: Fri Dec 21 16:10:23 EST 2046
+Certificate fingerprints:
+	 SHA1: 87:C1:CB:2A:F7:A6:12:42:F4:06:B2:D5:71:25:3F:48:A0:C2:80:B8
+	 SHA256: F8:E1:30:62:88:6D:CD:9D:93:FB:B8:F2:71:61:C8:E5:4B:31:C7:E5:53:5E:9A:54:57:36:3E:91:96:49:3B:3E
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+#2: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: C6 35 DE 02 F7 2E 91 D6   EC A5 3D 74 E5 AE DD 71  .5........=t...q
+0010: C5 DC D9 8B                                        ....
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+

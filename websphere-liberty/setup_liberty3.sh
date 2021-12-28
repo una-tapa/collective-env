@@ -10,3 +10,4 @@ echo "***** addReplica command "
 /opt/ibm/wlp/bin/collective addReplica liberty3:10010 --controller=gil:gilpwd@liberty1:9443 --autoAcceptCertificates
 echo "***** Saving keystores  "
 cp -r /opt/ibm/wlp/usr/servers/defaultServer/resources /logs/liberty3-keystores-resources
+cp -r /opt/ibm/wlp/usr/servers/defaultServer/server.xml /logs/server.xml

@@ -1,15 +1,17 @@
 ######################################
 # Use websphere-liberty:full that has collective feature
 ######################################
-FROM websphere-liberty:full
+## FROM websphere-liberty:full
+## FROM websphere-liberty:21.0.0.11-full-java8-ibmjava-ubi
+FROM ibmcom/websphere-liberty:21.0.0.11-full-java8-ibmjava-ubi
 USER root
-RUN apt-get update
+# RUN apt-get update
 ######################################
 # install utilities, ping, emacs, wcp
 ######################################
-RUN apt-get install -y iputils-ping
-RUN apt-get install -y emacs
-RUN apt-get -y install openssh-client
+# RUN apt-get install -y iputils-ping
+# RUN apt-get install -y emacs
+# RUN apt-get -y install openssh-client
 ######################################
 # Ensure collective feature is installed
 ######################################
@@ -27,7 +29,8 @@ COPY liberty2-replica-server.xml /opt/ibm/wlp/usr/servers/defaultServer/
 COPY liberty3-replica-server.xml /opt/ibm/wlp/usr/servers/defaultServer/
 COPY liberty4-member-to-liberty1-controller.xml /opt/ibm/wlp/usr/servers/defaultServer/
 COPY bootstrap.properties /opt/ibm/wlp/usr/servers/defaultServer/bootstrap.properties
-COPY jvm.options /opt/ibm/wlp/usr/servers/defaultServer/jvm.options.save
+# COPY jvm.options /opt/ibm/wlp/usr/servers/defaultServer/jvm.options.save
+COPY jvm.options /opt/ibm/wlp/usr/servers/defaultServer/jvm.options
 ######################################
 # COPY setup script and reminder text
 ######################################

@@ -5,9 +5,12 @@ This is docker-compose test environment
 
 ## Steps
 - Clone this repo.
-- Make sure docker network/ports have no conflicts by running `docker ps` and `docker network`.
+- Make sure docker network/ports have no conflicts by running `docker ps` and `docker network`.  (Hint `docker image prune -a`, `docker network prune`)
+- Clean up  `~/docker/logsX` directory to collect clean log and trace. 
+- Edit `websphere-liberty/Dockerfile` to see if JSSE trace will be collected. Update whether to use `jvm.options` accordingly.    
 - `docker-compose.build` to build the Docker image
 - `docker-compose up` to start 4 servers (ignore some error messages)
+
     ```
     htakamiy@us.ibm.com@Hirokos-MBP collective-env % docker-compose up
     Starting liberty3 ... done
@@ -42,11 +45,21 @@ This is docker-compose test environment
     - For each container, `/logs` is locally `Users/htakamiy@us.ibm.com/logs/docker/logs1`
     - Change `docker-compose.yaml` definition to map local directory of your choice!
 
+## Passwords
+
+The commands for collective join/replicate is found in the setup_libertyX.sh commands. They contains the passwords. 
+
+```
+./websphere-liberty/remindme.txt:liberty1 : c1KS (keystore password), gil/gilpwd
+./websphere-liberty/remindme.txt:liberty2 : c2KS (keystore password), gil/gilpwd
+./websphere-liberty/remindme.txt:liberty3 : c3KS (keystore password), gil/gilpwd
+./websphere-liberty/remindme.txt:liberty4 : m1KS
+```
 
 ## Details
 - docker-compose.yml : 
     - This file will bring up 4 servers 
-    - Each server is based on `websphere-liberty:full` docker image
+    - Each server is based on `websphere-liberty:full` docker image (Update 12/27/2021: According to https://hub.docker.com/r/ibmcom/websphere-liberty/, the Docker file was updated with `FROM ibmcom/websphere-liberty:21.0.0.11-full-java8-ibmjava-ubi` )
     - All of them has `collectiveController-1.0` is installed
     - Hostname, ip address, ports are defined to avoid conflicts
         - 2809, 9043, 9443, 9080, 10010 (bootstrap default port)

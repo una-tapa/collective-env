@@ -1,0 +1,79 @@
+Keystore type: PKCS12
+Keystore provider: SUN
+
+Your keystore contains 2 entries
+
+Alias name: controllerroot
+Creation date: Dec 27, 2021
+Entry type: trustedCertEntry
+
+Owner: OU=controllerRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Issuer: OU=controllerRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Serial number: ad149738d96
+Valid from: Mon Dec 27 16:10:23 EST 2021 until: Fri Dec 21 16:10:23 EST 2046
+Certificate fingerprints:
+	 SHA1: 87:C1:CB:2A:F7:A6:12:42:F4:06:B2:D5:71:25:3F:48:A0:C2:80:B8
+	 SHA256: F8:E1:30:62:88:6D:CD:9D:93:FB:B8:F2:71:61:C8:E5:4B:31:C7:E5:53:5E:9A:54:57:36:3E:91:96:49:3B:3E
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+#2: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: C6 35 DE 02 F7 2E 91 D6   EC A5 3D 74 E5 AE DD 71  .5........=t...q
+0010: C5 DC D9 8B                                        ....
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+Alias name: memberroot
+Creation date: Dec 27, 2021
+Entry type: trustedCertEntry
+
+Owner: OU=memberRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Issuer: OU=memberRoot, O=e0b5b3fc-fa16-46f8-a254-cbef8b885297, DC=com.ibm.ws.collective
+Serial number: ad189a5e3d2
+Valid from: Mon Dec 27 16:10:24 EST 2021 until: Fri Dec 21 16:10:24 EST 2046
+Certificate fingerprints:
+	 SHA1: 6E:B3:AD:B5:E3:3A:16:05:A7:21:87:71:95:D5:FC:A3:1F:72:E3:E6
+	 SHA256: B7:D6:EC:D5:88:B2:67:F6:D1:B6:BB:CD:A5:9A:27:C6:9A:EC:9E:4A:96:37:D7:05:B7:53:56:D4:49:5D:CA:27
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+#2: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: DB 26 C5 1B 3E 72 C6 13   5C CC 42 B0 B7 B6 B0 67  .&..>r..\.B....g
+0010: FE 19 98 3C                                        ...<
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
